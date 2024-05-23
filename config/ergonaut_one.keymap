@@ -1,1 +1,222 @@
-boards/shields/ergonaut_one/ergonaut_one.keymap
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define DEF 0
+#define LWR 1
+#define RSE 2
+#define ADJ 3
+
+&lt { quick-tap-ms = <200>; };
+
+&mt {
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <150>;
+    tapping-term-ms = <300>;
+    flavor = "tap-preferred";
+};
+
+&sk {
+    quick-release;
+    release-after-ms = <2000>;
+};
+
+&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; };
+
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        functio {
+            if-layers = <3 4>;
+            then-layer = <5>;
+        };
+    };
+
+    macros {
+        arrow_fn: arrow_fn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp GT &kp SPACE>;
+            label = "ARROW_FN";
+        };
+
+        flash: flash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 9 &bootloader>;
+            label = "Flash Dongle";
+        };
+
+        vtab: vtab {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp ESC &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp G &kp T>;
+            label = "VTAB";
+        };
+
+        vldr: vldr {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp ESCAPE &kp SPACE &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "VLDR";
+        };
+
+        vimQ: vimQ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp COLON &kp Q &kp EXCL &kp RET>;
+            label = "VIMQ";
+        };
+
+        tmux: tmux {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp LC(B) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TMUX";
+        };
+    };
+
+    behaviors {
+        sscw: sscw {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Sticky Shift Caps Word";
+            bindings = <&sk LEFT_SHIFT>, <&caps_word>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        lsscw: lsscw {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Layer Sticky Shift Caps Word";
+            bindings = <&mo>, <&sscw>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+        };
+
+        comma: comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Comma Semicolon";
+            bindings = <&kp COMMA>, <&kp SEMI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        dot: dot {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Dot Colon";
+            bindings = <&kp DOT>, <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        slash: slash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Slash Backslash";
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        Colemak {
+            bindings = <
+&kp TAB                    &kp Q  &kp W  &kp F                 &kp P                   &kp B       &kp J        &kp L                    &kp U                     &kp Y  &kp SQT  &kp BACKSPACE
+&lt 8 ESC                  &kp A  &kp R  &kp S                 &kp T                   &kp G       &kp M        &kp N                    &kp E                     &kp I  &kp O    &kp RET
+&mt LEFT_GUI LEFT_BRACKET  &kp Z  &kp X  &kp C                 &kp D                   &kp V       &kp K        &kp H                    &comma                    &dot   &slash   &mt LEFT_SHIFT RIGHT_BRACKET
+                                         &mt LCTRL LEFT_BRACE  &lt 3 LEFT_PARENTHESIS  &lsscw 4 0  &lt 6 SPACE  &lt 7 RIGHT_PARENTHESIS  &mt LEFT_ALT RIGHT_BRACE
+            >;
+        };
+
+        Qwerty {
+            bindings = <
+&trans  &kp Q  &kp W  &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I   &kp O  &kp P     &trans
+&trans  &kp A  &kp S  &kp D   &kp F   &kp G   &kp H   &kp J   &kp K   &kp L  &kp APOS  &trans
+&trans  &kp Z  &kp X  &kp C   &kp V   &kp B   &kp N   &kp M   &comma  &dot   &slash    &trans
+                      &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Dvorak {
+            bindings = <
+&trans  &kp SQT  &comma  &dot    &kp P   &kp Y   &kp F   &kp G   &kp C   &kp R  &kp L  &trans
+&trans  &kp A    &kp O   &kp E   &kp U   &kp I   &kp D   &kp H   &kp T   &kp N  &kp S  &trans
+&trans  &slash   &kp Q   &kp J   &kp K   &kp X   &kp B   &kp M   &kp W   &kp V  &kp Z  &trans
+                         &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        numpad {
+            bindings = <
+&none     &none  &none      &none      &none     &none     &kp FSLH   &kp N7  &kp N8   &kp N9  &kp MINUS  &kp BSPC
+&none     &none  &kp LCTRL  &kp LALT   &kp LCMD  &kp RALT  &kp STAR   &kp N4  &kp N5   &kp N6  &kp PLUS   &kp ENTER
+&kp LCMD  &none  &none      &none      &none     &none     &kp COLON  &kp N1  &kp N2   &kp N3  &kp EQUAL  &kp TAB
+                            &kp LCTRL  &trans    &trans    &kp COMMA  &kp N0  &kp DOT
+            >;
+        };
+
+        navigation {
+            bindings = <
+&none     &none      &none      &none      &none     &none     &kp PG_UP  &none     &none     &none      &none  &kp DEL
+&none     &kp LSHFT  &kp LCTRL  &kp LALT   &kp LCMD  &kp RALT  &none      &kp LEFT  &kp UP    &kp RIGHT  &none  &none
+&kp LCMD  &none      &none      &none      &none     &none     &kp PG_DN  &none     &kp DOWN  &none      &none  &none
+                                &kp LCTRL  &trans    &trans    &kp SPACE  &kp HOME  &kp END
+            >;
+        };
+
+        function {
+            bindings = <
+&none     &none       &none      &none      &none     &none     &none    &kp F7   &kp F8   &kp F9  &none  &none
+&none     &kp LSHIFT  &kp LCTRL  &kp LALT   &kp LCMD  &kp RALT  &none    &kp F4   &kp F5   &kp F6  &none  &none
+&kp LCMD  &none       &none      &none      &none     &none     &none    &kp F1   &kp F2   &kp F3  &none  &none
+                                 &kp LCTRL  &trans    &trans    &kp F10  &kp F11  &kp F12
+            >;
+        };
+
+        symbols {
+            bindings = <
+&kp GRAVE  &kp TILDE  &kp HASH   &kp STAR   &kp AT     &kp SPACE  &none     &none     &none     &none      &none  &none
+&kp CARET  &kp UNDER  &kp MINUS  &kp EXCL   &kp EQUAL  &kp DLLR   &kp RALT  &kp LCMD  &kp LALT  &kp LCTRL  &none  &none
+&kp LT     &kp GT     &kp FSLH   &kp PLUS   &kp PRCNT  &kp QMARK  &none     &none     &none     &none      &none  &none
+                                 &arrow_fn  &kp PIPE   &kp AMPS   &trans    &none     &kp LALT
+            >;
+        };
+
+        keyboard {
+            bindings = <
+&bootloader  &to 1         &none                  &none         &kp C_BRIGHTNESS_INC  &kp C_VOL_UP  &none       &none   &out OUT_USB  &none  &none  &bootloader
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1           &bt BT_SEL 2  &bt BT_SEL 3          &bt BT_SEL 4  &to 2       &none   &none         &none  &none  &flash
+&none        &none         &kp LS(LA(LC(LG(M))))  &to 0         &kp C_BRI_DN          &kp C_VOL_DN  &kp K_MUTE  &none   &none         &none  &none  &kp CAPSLOCK
+                                                  &kp C_PREV    &kp C_PLAY_PAUSE      &kp C_NEXT    &none       &trans  &none
+            >;
+        };
+
+        vim {
+            bindings = <
+&none   &none  &none  &none  &none  &none  &tmux D  &vtab N7        &vtab N8  &vtab N9        &none  &vimQ
+&trans  &none  &none  &none  &none  &none  &tmux A  &vtab NUMBER_4  &vtab N5  &vtab NUMBER_6  &none  &none
+&none   &none  &none  &none  &none  &none  &tmux C  &vtab N1        &vtab N2  &vtab N3        &none  &vldr Q
+                      &none  &none  &none  &vldr W  &tmux N         &vtab N0
+            >;
+        };
+
+        bootloader {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+    };
+};
