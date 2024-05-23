@@ -11,7 +11,7 @@ layers:
   - U
   - Y
   - ''''
-  - BACKSPACE
+  - ⌫
   - {t: Esc, h: vim}
   - A
   - R
@@ -24,7 +24,7 @@ layers:
   - I
   - O
   - ⏎
-  - {t: '[', h: LEFT GUI}
+  - {t: '[', h: Cmd}
   - Z
   - X
   - C
@@ -35,13 +35,13 @@ layers:
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - {t: /, s: \}
-  - {t: ']', h: LEFT SHIFT}
+  - {t: ']', h: Shift}
   - {t: '{', h: Ctrl}
   - {t: (, h: numpad}
-  - {t: LEFT SHIFT, h: navigation, s: Caps Word}
+  - {t: Sticky Shift, h: navigation, s: Caps Word}
   - {t: ␣, h: symbols}
   - {t: ), h: keyboard}
-  - {t: '}', h: LEFT ALT}
+  - {t: '}', h: Opt}
   Qwerty:
   - {t: ▽, type: trans}
   - Q
@@ -145,15 +145,15 @@ layers:
   - ''
   - Ctrl
   - Alt
-  - LCMD
-  - Alt
+  - Cmd
+  - R Alt
   - '*'
   - '4'
   - '5'
   - '6'
   - +
   - ENTER
-  - LCMD
+  - Cmd
   - ''
   - ''
   - ''
@@ -178,7 +178,7 @@ layers:
   - ''
   - ''
   - ''
-  - Page Up
+  - Pg Up
   - ''
   - ''
   - ''
@@ -188,21 +188,21 @@ layers:
   - Shift
   - Ctrl
   - Alt
-  - LCMD
-  - Alt
+  - Cmd
+  - R Alt
   - ''
   - ←
   - ↑
   - →
   - ''
   - ''
-  - LCMD
+  - Cmd
   - ''
   - ''
   - ''
   - ''
   - ''
-  - Page Down
+  - Pg Dn
   - ''
   - ↓
   - ''
@@ -228,18 +228,18 @@ layers:
   - ''
   - ''
   - ''
-  - LSHIFT
+  - Shift
   - Ctrl
   - Alt
-  - LCMD
-  - Alt
+  - Cmd
+  - R Alt
   - ''
   - F4
   - F5
   - F6
   - ''
   - ''
-  - LCMD
+  - Cmd
   - ''
   - ''
   - ''
@@ -276,8 +276,8 @@ layers:
   - '!'
   - '='
   - $
-  - Alt
-  - LCMD
+  - R Alt
+  - Cmd
   - Alt
   - Ctrl
   - ''
@@ -294,7 +294,7 @@ layers:
   - ''
   - ''
   - ''
-  - '&arrow_fn'
+  - '=>'
   - '|'
   - '&'
   - {type: held}
@@ -327,7 +327,7 @@ layers:
   - '&flash'
   - ''
   - ''
-  - Hyper+ M
+  - Hyper+M
   - {t: Colemak, h: toggle}
   - BRI DN
   - Vol Down
