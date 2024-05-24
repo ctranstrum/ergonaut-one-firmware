@@ -11,7 +11,7 @@ layers:
   - U
   - Y
   - ''''
-  - ⌫
+  - BACKSPACE
   - {t: Esc, h: vim}
   - A
   - R
@@ -23,8 +23,8 @@ layers:
   - E
   - I
   - O
-  - ⏎
-  - {t: '[', h: Cmd}
+  - {t: ⏎, h: keyboard}
+  - {t: '[', h: LEFT GUI}
   - Z
   - X
   - C
@@ -35,13 +35,13 @@ layers:
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - {t: /, s: \}
-  - {t: ']', h: Shift}
+  - {t: ']', h: LEFT SHIFT}
   - {t: '{', h: Ctrl}
-  - {t: (, h: numpad}
-  - {t: Sticky Shift, h: navigation, s: Caps Word}
+  - {t: (, h: num_mo}
+  - {t: Shift, h: navigation, s: Caps Word}
   - {t: ␣, h: symbols}
-  - {t: ), h: keyboard}
-  - {t: '}', h: Opt}
+  - {t: ), h: LCMD}
+  - {t: '}', h: LEFT ALT}
   Qwerty:
   - {t: ▽, type: trans}
   - Q
@@ -128,8 +128,94 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  num_mo:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  num_tog:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   numpad:
-  - ''
+  - ↹
   - ''
   - ''
   - ''
@@ -141,19 +227,19 @@ layers:
   - '9'
   - '-'
   - ⌫
-  - ''
+  - {t: num_tog, h: toggle}
   - ''
   - Ctrl
   - Alt
-  - Cmd
-  - R Alt
+  - LCMD
+  - Alt
   - '*'
   - '4'
   - '5'
   - '6'
   - +
   - ENTER
-  - Cmd
+  - LCMD
   - ''
   - ''
   - ''
@@ -166,7 +252,7 @@ layers:
   - '='
   - ↹
   - Ctrl
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ','
   - '0'
@@ -178,7 +264,7 @@ layers:
   - ''
   - ''
   - ''
-  - Pg Up
+  - Page Up
   - ''
   - ''
   - ''
@@ -188,26 +274,26 @@ layers:
   - Shift
   - Ctrl
   - Alt
-  - Cmd
-  - R Alt
+  - LCMD
+  - Alt
   - ''
   - ←
   - ↑
   - →
   - ''
-  - ''
-  - Cmd
-  - ''
-  - ''
+  - ⏎
+  - LCMD
   - ''
   - ''
   - ''
-  - Pg Dn
+  - ''
+  - ''
+  - Page Down
   - ''
   - ↓
   - ''
   - ''
-  - ''
+  - Shift
   - Ctrl
   - {t: ▽, type: trans}
   - {type: held}
@@ -225,21 +311,21 @@ layers:
   - F7
   - F8
   - F9
-  - ''
+  - F12
   - ''
   - ''
   - Shift
   - Ctrl
   - Alt
-  - Cmd
-  - R Alt
+  - LCMD
+  - Alt
   - ''
   - F4
   - F5
   - F6
+  - F11
   - ''
-  - ''
-  - Cmd
+  - LCMD
   - ''
   - ''
   - ''
@@ -249,21 +335,21 @@ layers:
   - F1
   - F2
   - F3
-  - ''
-  - ''
+  - F10
+  - Shift
   - Ctrl
-  - {type: held}
+  - {t: ▽, type: trans}
   - {type: held}
   - F10
   - F11
   - F12
   symbols:
   - '`'
-  - '~'
+  - /
   - '#'
   - '*'
-  - '@'
-  - ␣
+  - '%'
+  - \
   - ''
   - ''
   - ''
@@ -271,22 +357,22 @@ layers:
   - ''
   - ''
   - ^
-  - _
+  - '@'
   - '-'
   - '!'
   - '='
   - $
-  - R Alt
-  - Cmd
+  - Alt
+  - LCMD
   - Alt
   - Ctrl
   - ''
   - ''
+  - '~'
   - <
   - '>'
-  - /
   - +
-  - '%'
+  - _
   - '?'
   - ''
   - ''
@@ -294,7 +380,7 @@ layers:
   - ''
   - ''
   - ''
-  - '=>'
+  - '&arrow_fn'
   - '|'
   - '&'
   - {type: held}
@@ -307,7 +393,7 @@ layers:
   - ''
   - BRIGHTNESS INC
   - Vol Up
-  - ''
+  - '&flash'
   - ''
   - Out USB
   - ''
@@ -324,10 +410,10 @@ layers:
   - ''
   - ''
   - ''
-  - '&flash'
+  - {type: held}
   - ''
   - ''
-  - Hyper+M
+  - Hyper+ M
   - {t: Colemak, h: toggle}
   - BRI DN
   - Vol Down
@@ -341,7 +427,7 @@ layers:
   - PLAY PAUSE
   - ⏭️
   - ''
-  - {type: held}
+  - ''
   - ''
   vim:
   - ''

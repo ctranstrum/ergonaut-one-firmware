@@ -28,8 +28,18 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        functio {
-            if-layers = <3 4>;
+        function_combination {
+            if-layers = <5 6>;
+            then-layer = <7>;
+        };
+
+        numpad_momentary {
+            if-layers = <3>;
+            then-layer = <5>;
+        };
+
+        numpad_toggle {
+            if-layers = <4>;
             then-layer = <5>;
         };
     };
@@ -45,7 +55,7 @@
         flash: flash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 9 &bootloader>;
+            bindings = <&to 11 &bootloader>;
             label = "Flash Dongle";
         };
 
@@ -82,7 +92,7 @@
         sscw: sscw {
             compatible = "zmk,behavior-mod-morph";
             label = "Sticky Shift Caps Word";
-            bindings = <&sk LEFT_SHIFT>, <&caps_word>;
+            bindings = <&sk LSHFT>, <&caps_word>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
@@ -131,10 +141,10 @@
 
         Colemak {
             bindings = <
-&kp TAB                    &kp Q  &kp W  &kp F                 &kp P                   &kp B       &kp J        &kp L                    &kp U                     &kp Y  &kp SQT  &kp BACKSPACE
-&lt 8 ESC                  &kp A  &kp R  &kp S                 &kp T                   &kp G       &kp M        &kp N                    &kp E                     &kp I  &kp O    &kp RET
-&mt LEFT_GUI LEFT_BRACKET  &kp Z  &kp X  &kp C                 &kp D                   &kp V       &kp K        &kp H                    &comma                    &dot   &slash   &mt LEFT_SHIFT RIGHT_BRACKET
-                                         &mt LCTRL LEFT_BRACE  &lt 3 LEFT_PARENTHESIS  &lsscw 4 0  &lt 6 SPACE  &lt 7 RIGHT_PARENTHESIS  &mt LEFT_ALT RIGHT_BRACE
+&kp TAB                    &kp Q  &kp W  &kp F                 &kp P                   &kp B       &kp J        &kp L                       &kp U                     &kp Y  &kp SQT  &kp BACKSPACE
+&lt 10 ESC                 &kp A  &kp R  &kp S                 &kp T                   &kp G       &kp M        &kp N                       &kp E                     &kp I  &kp O    &lt 9 RET
+&mt LEFT_GUI LEFT_BRACKET  &kp Z  &kp X  &kp C                 &kp D                   &kp V       &kp K        &kp H                       &comma                    &dot   &slash   &mt LEFT_SHIFT RIGHT_BRACKET
+                                         &mt LCTRL LEFT_BRACE  &lt 3 LEFT_PARENTHESIS  &lsscw 6 0  &lt 8 SPACE  &mt LCMD RIGHT_PARENTHESIS  &mt LEFT_ALT RIGHT_BRACE
             >;
         };
 
@@ -156,10 +166,28 @@
             >;
         };
 
+        num_mo {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        num_tog {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
         numpad {
             bindings = <
-&none     &none  &none      &none      &none     &none     &kp FSLH   &kp N7  &kp N8   &kp N9  &kp MINUS  &kp BSPC
-&none     &none  &kp LCTRL  &kp LALT   &kp LCMD  &kp RALT  &kp STAR   &kp N4  &kp N5   &kp N6  &kp PLUS   &kp ENTER
+&kp TAB   &none  &none      &none      &none     &none     &kp FSLH   &kp N7  &kp N8   &kp N9  &kp MINUS  &kp BSPC
+&tog 4    &none  &kp LCTRL  &kp LALT   &kp LCMD  &kp RALT  &kp STAR   &kp N4  &kp N5   &kp N6  &kp PLUS   &kp ENTER
 &kp LCMD  &none  &none      &none      &none     &none     &kp COLON  &kp N1  &kp N2   &kp N3  &kp EQUAL  &kp TAB
                             &kp LCTRL  &trans    &trans    &kp COMMA  &kp N0  &kp DOT
             >;
@@ -168,36 +196,36 @@
         navigation {
             bindings = <
 &none     &none      &none      &none      &none     &none     &kp PG_UP  &none     &none     &none      &none  &kp DEL
-&none     &kp LSHFT  &kp LCTRL  &kp LALT   &kp LCMD  &kp RALT  &none      &kp LEFT  &kp UP    &kp RIGHT  &none  &none
-&kp LCMD  &none      &none      &none      &none     &none     &kp PG_DN  &none     &kp DOWN  &none      &none  &none
+&none     &kp LSHFT  &kp LCTRL  &kp LALT   &kp LCMD  &kp RALT  &none      &kp LEFT  &kp UP    &kp RIGHT  &none  &kp RET
+&kp LCMD  &none      &none      &none      &none     &none     &kp PG_DN  &none     &kp DOWN  &none      &none  &kp LSHFT
                                 &kp LCTRL  &trans    &trans    &kp SPACE  &kp HOME  &kp END
             >;
         };
 
         function {
             bindings = <
-&none     &none       &none      &none      &none     &none     &none    &kp F7   &kp F8   &kp F9  &none  &none
-&none     &kp LSHIFT  &kp LCTRL  &kp LALT   &kp LCMD  &kp RALT  &none    &kp F4   &kp F5   &kp F6  &none  &none
-&kp LCMD  &none       &none      &none      &none     &none     &none    &kp F1   &kp F2   &kp F3  &none  &none
-                                 &kp LCTRL  &trans    &trans    &kp F10  &kp F11  &kp F12
+&none     &none      &none      &none      &none     &none     &none    &kp F7   &kp F8   &kp F9  &kp F12  &none
+&none     &kp LSHFT  &kp LCTRL  &kp LALT   &kp LCMD  &kp RALT  &none    &kp F4   &kp F5   &kp F6  &kp F11  &none
+&kp LCMD  &none      &none      &none      &none     &none     &none    &kp F1   &kp F2   &kp F3  &kp F10  &kp LSHFT
+                                &kp LCTRL  &trans    &trans    &kp F10  &kp F11  &kp F12
             >;
         };
 
         symbols {
             bindings = <
-&kp GRAVE  &kp TILDE  &kp HASH   &kp STAR   &kp AT     &kp SPACE  &none     &none     &none     &none      &none  &none
-&kp CARET  &kp UNDER  &kp MINUS  &kp EXCL   &kp EQUAL  &kp DLLR   &kp RALT  &kp LCMD  &kp LALT  &kp LCTRL  &none  &none
-&kp LT     &kp GT     &kp FSLH   &kp PLUS   &kp PRCNT  &kp QMARK  &none     &none     &none     &none      &none  &none
+&kp GRAVE  &kp SLASH  &kp HASH   &kp STAR   &kp PRCNT  &kp BSLH   &none     &none     &none     &none      &none  &none
+&kp CARET  &kp AT     &kp MINUS  &kp EXCL   &kp EQUAL  &kp DLLR   &kp RALT  &kp LCMD  &kp LALT  &kp LCTRL  &none  &none
+&kp TILDE  &kp LT     &kp GT     &kp PLUS   &kp UNDER  &kp QMARK  &none     &none     &none     &none      &none  &none
                                  &arrow_fn  &kp PIPE   &kp AMPS   &trans    &none     &kp LALT
             >;
         };
 
         keyboard {
             bindings = <
-&bootloader  &to 1         &none                  &none         &kp C_BRIGHTNESS_INC  &kp C_VOL_UP  &none       &none   &out OUT_USB  &none  &none  &bootloader
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1           &bt BT_SEL 2  &bt BT_SEL 3          &bt BT_SEL 4  &to 2       &none   &none         &none  &none  &flash
-&none        &none         &kp LS(LA(LC(LG(M))))  &to 0         &kp C_BRI_DN          &kp C_VOL_DN  &kp K_MUTE  &none   &none         &none  &none  &kp CAPSLOCK
-                                                  &kp C_PREV    &kp C_PLAY_PAUSE      &kp C_NEXT    &none       &trans  &none
+&bootloader  &to 1         &none                  &none         &kp C_BRIGHTNESS_INC  &kp C_VOL_UP  &flash      &none  &out OUT_USB  &none  &none  &bootloader
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1           &bt BT_SEL 2  &bt BT_SEL 3          &bt BT_SEL 4  &to 2       &none  &none         &none  &none  &trans
+&none        &none         &kp LS(LA(LC(LG(M))))  &to 0         &kp C_BRI_DN          &kp C_VOL_DN  &kp K_MUTE  &none  &none         &none  &none  &kp CAPSLOCK
+                                                  &kp C_PREV    &kp C_PLAY_PAUSE      &kp C_NEXT    &none       &none  &none
             >;
         };
 
