@@ -9,7 +9,6 @@ if(CONFIG_ZMK_DISPLAY AND CONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM AND ((NOT CONF
     zephyr_library_sources(widgets/battery_status.c)
     zephyr_library_sources(widgets/bongo_cat.c)
     zephyr_library_sources(widgets/bongo_cat_images.c)
-    zephyr_library_sources(widgets/kb_logo.c)
     zephyr_library_sources(widgets/layer_status.c)
     zephyr_library_sources(widgets/modifiers.c)
     zephyr_library_sources(widgets/modifiers_sym.c)
