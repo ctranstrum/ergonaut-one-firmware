@@ -29,18 +29,18 @@
         compatible = "zmk,conditional-layers";
 
         function_combination {
-            if-layers = <4 5>;
-            then-layer = <6>;
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
 
         numpad_momentary {
-            if-layers = <3>;
-            then-layer = <4>;
+            if-layers = <10>;
+            then-layer = <3>;
         };
 
         numpad_toggle {
             if-layers = <11>;
-            then-layer = <4>;
+            then-layer = <3>;
         };
     };
 
@@ -142,9 +142,9 @@
         Colemak {
             bindings = <
 &kp TAB                 &kp Q  &kp W  &kp F                &kp P                   &kp B       &kp J        &kp L                       &kp U                     &kp Y  &kp SQT  &kp BACKSPACE
-&lt 9 ESC               &kp A  &kp R  &kp S                &kp T                   &kp G       &kp M        &kp N                       &kp E                     &kp I  &kp O    &lt 8 RET
+&lt 8 ESC               &kp A  &kp R  &kp S                &kp T                   &kp G       &kp M        &kp N                       &kp E                     &kp I  &kp O    &lt 7 RET
 &mt LCTRL LEFT_BRACKET  &kp Z  &kp X  &kp C                &kp D                   &kp V       &kp K        &kp H                       &comma                    &dot   &slash   &mt LEFT_SHIFT RIGHT_BRACKET
-                                      &mt LCMD LEFT_BRACE  &lt 3 LEFT_PARENTHESIS  &lsscw 5 0  &lt 7 SPACE  &mt LCMD RIGHT_PARENTHESIS  &mt LEFT_ALT RIGHT_BRACE
+                                      &mt LCMD LEFT_BRACE  &lt 9 LEFT_PARENTHESIS  &lsscw 4 0  &lt 6 SPACE  &mt LCMD RIGHT_PARENTHESIS  &mt LEFT_ALT RIGHT_BRACE
             >;
         };
 
@@ -163,15 +163,6 @@
 &trans  &kp A    &kp O   &kp E   &kp U   &kp I   &kp D   &kp H   &kp T   &kp N  &kp S  &trans
 &trans  &slash   &kp Q   &kp J   &kp K   &kp X   &kp B   &kp M   &kp W   &kp V  &kp Z  &trans
                          &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        num_pad {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -226,6 +217,15 @@
 &trans  &none  &none  &none  &none  &none  &tmux A  &vtab NUMBER_4  &vtab N5  &vtab NUMBER_6  &none  &none
 &none   &none  &none  &none  &none  &none  &tmux C  &vtab N1        &vtab N2  &vtab N3        &none  &vldr Q
                       &none  &none  &none  &vldr W  &tmux N         &vtab N0
+            >;
+        };
+
+        num_pad {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
