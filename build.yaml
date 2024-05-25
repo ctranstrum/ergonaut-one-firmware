@@ -1,7 +1,16 @@
 include:
+  # Ergonaut One - https://ergonautkb.com/docs/keyboards/ergonaut-one/intro/
+  - board: seeeduino_xiao_ble
+    shield: ergonaut_one_dongle dongle_oled
+    artifact_name: ergonaut_dongle
   - board: seeeduino_xiao_ble
     shield: ergonaut_one_left
+    artifact-name: ergonaut_left
   - board: seeeduino_xiao_ble
     shield: ergonaut_one_right
+    artifact-name: ergonaut_right
+
+  # Settings reset
   - board: seeeduino_xiao_ble
     shield: settings_reset
+    artifact-name: xiao_reset

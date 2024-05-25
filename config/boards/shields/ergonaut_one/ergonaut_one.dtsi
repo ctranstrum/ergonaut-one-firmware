@@ -8,7 +8,6 @@
 
 / {
     chosen {
-        zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
         /* /delete-property/ zephyr,console; */
         /* /delete-property/ zephyr,shell-uart; */
@@ -31,22 +30,10 @@
                                     RC(3,3) RC(3,4) RC(3,5)  RC(3,11) RC(3,10) RC(3,9)
             >;
     };
-
-	kscan0: kscan_0 {
-		compatible = "zmk,kscan-gpio-matrix";
-		label = "KSCAN";
-		wakeup-source;
-
-		diode-direction = "col2row";
-		row-gpios
-			= <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&xiao_d  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&xiao_d  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&xiao_d  7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			;
-	};
 };
 
 &xiao_spi { status = "disabled"; };
 &xiao_i2c { status = "disabled"; };
 &xiao_serial { status = "disabled"; };
+
+// vim: expandtab softabstop=4 shiftwidth=4
