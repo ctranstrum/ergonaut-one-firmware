@@ -29,18 +29,18 @@
         compatible = "zmk,conditional-layers";
 
         function_combination {
-            if-layers = <5 6>;
-            then-layer = <7>;
+            if-layers = <4 5>;
+            then-layer = <6>;
         };
 
         numpad_momentary {
             if-layers = <3>;
-            then-layer = <5>;
+            then-layer = <4>;
         };
 
         numpad_toggle {
-            if-layers = <4>;
-            then-layer = <5>;
+            if-layers = <11>;
+            then-layer = <4>;
         };
     };
 
@@ -141,10 +141,10 @@
 
         Colemak {
             bindings = <
-&kp TAB                    &kp Q  &kp W  &kp F                 &kp P                   &kp B       &kp J        &kp L                       &kp U                     &kp Y  &kp SQT  &kp BACKSPACE
-&lt 10 ESC                 &kp A  &kp R  &kp S                 &kp T                   &kp G       &kp M        &kp N                       &kp E                     &kp I  &kp O    &lt 9 RET
-&mt LEFT_GUI LEFT_BRACKET  &kp Z  &kp X  &kp C                 &kp D                   &kp V       &kp K        &kp H                       &comma                    &dot   &slash   &mt LEFT_SHIFT RIGHT_BRACKET
-                                         &mt LCTRL LEFT_BRACE  &lt 3 LEFT_PARENTHESIS  &lsscw 6 0  &lt 8 SPACE  &mt LCMD RIGHT_PARENTHESIS  &mt LEFT_ALT RIGHT_BRACE
+&kp TAB                 &kp Q  &kp W  &kp F                &kp P                   &kp B       &kp J        &kp L                       &kp U                     &kp Y  &kp SQT  &kp BACKSPACE
+&lt 9 ESC               &kp A  &kp R  &kp S                &kp T                   &kp G       &kp M        &kp N                       &kp E                     &kp I  &kp O    &lt 8 RET
+&mt LCTRL LEFT_BRACKET  &kp Z  &kp X  &kp C                &kp D                   &kp V       &kp K        &kp H                       &comma                    &dot   &slash   &mt LEFT_SHIFT RIGHT_BRACKET
+                                      &mt LCMD LEFT_BRACE  &lt 3 LEFT_PARENTHESIS  &lsscw 5 0  &lt 7 SPACE  &mt LCMD RIGHT_PARENTHESIS  &mt LEFT_ALT RIGHT_BRACE
             >;
         };
 
@@ -166,16 +166,7 @@
             >;
         };
 
-        num_mo {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        num_tog {
+        num_pad {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -187,7 +178,7 @@
         numpad {
             bindings = <
 &kp TAB   &none  &none      &none      &none     &none     &kp FSLH   &kp N7  &kp N8   &kp N9  &kp MINUS  &kp BSPC
-&tog 4    &none  &kp LCTRL  &kp LALT   &kp LCMD  &kp RALT  &kp STAR   &kp N4  &kp N5   &kp N6  &kp PLUS   &kp ENTER
+&tog 10   &none  &kp LCTRL  &kp LALT   &kp LCMD  &kp RALT  &kp STAR   &kp N4  &kp N5   &kp N6  &kp PLUS   &kp ENTER
 &kp LCMD  &none  &none      &none      &none     &none     &kp COLON  &kp N1  &kp N2   &kp N3  &kp EQUAL  &kp TAB
                             &kp LCTRL  &trans    &trans    &kp COMMA  &kp N0  &kp DOT
             >;
@@ -222,10 +213,10 @@
 
         keyboard {
             bindings = <
-&bootloader  &to 1         &none                  &none         &kp C_BRIGHTNESS_INC  &kp C_VOL_UP  &flash      &none  &out OUT_USB  &none  &none  &bootloader
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1           &bt BT_SEL 2  &bt BT_SEL 3          &bt BT_SEL 4  &to 2       &none  &none         &none  &none  &trans
-&none        &none         &kp LS(LA(LC(LG(M))))  &to 0         &kp C_BRI_DN          &kp C_VOL_DN  &kp K_MUTE  &none  &none         &none  &none  &kp CAPSLOCK
-                                                  &kp C_PREV    &kp C_PLAY_PAUSE      &kp C_NEXT    &none       &none  &none
+&bootloader  &to 1         &none                  &kp LS(LG(N4))  &kp C_BRIGHTNESS_INC  &kp C_VOL_UP  &flash      &none  &out OUT_USB  &none  &none  &bootloader
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1           &bt BT_SEL 2    &bt BT_SEL 3          &bt BT_SEL 4  &to 2       &none  &none         &none  &none  &trans
+&none        &none         &kp LS(LA(LC(LG(M))))  &to 0           &kp C_BRI_DN          &kp C_VOL_DN  &kp K_MUTE  &none  &none         &none  &none  &kp CAPSLOCK
+                                                  &kp C_PREV      &kp C_PLAY_PAUSE      &kp C_NEXT    &none       &none  &none
             >;
         };
 
@@ -235,6 +226,15 @@
 &trans  &none  &none  &none  &none  &none  &tmux A  &vtab NUMBER_4  &vtab N5  &vtab NUMBER_6  &none  &none
 &none   &none  &none  &none  &none  &none  &tmux C  &vtab N1        &vtab N2  &vtab N3        &none  &vldr Q
                       &none  &none  &none  &vldr W  &tmux N         &vtab N0
+            >;
+        };
+
+        numpad_toggle {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
