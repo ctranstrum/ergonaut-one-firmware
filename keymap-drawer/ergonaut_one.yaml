@@ -313,12 +313,12 @@ layers:
   - ''
   - ''
   - Boot
-  - BT CLR
-  - BT 1
-  - BT 2
-  - BT 3
-  - BT 4
-  - BT 5
+  - ''
+  - {t: '&bt_sel', h: '&bt_clr'}
+  - {t: '&bt_sel 1', h: '&bt_clr 1'}
+  - {t: '&bt_sel 2', h: '&bt_clr 2'}
+  - {t: '&bt_sel 3', h: '&bt_clr 3'}
+  - {t: '&bt_sel 4', h: '&bt_clr 4'}
   - {t: Dvorak, h: toggle}
   - ''
   - ''
