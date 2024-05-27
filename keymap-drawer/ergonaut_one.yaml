@@ -1,0 +1,431 @@
+layers:
+  Colemak:
+  - ⇥
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ''''
+  - ⌫
+  - {t: Esc, h: vim & tmux}
+  - A
+  - R
+  - S
+  - T
+  - G
+  - M
+  - N
+  - E
+  - I
+  - O
+  - {t: ⏎, h: keyboard}
+  - {t: '[', h: Ctrl}
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - {t: /, s: \}
+  - {t: ']', h: Shift}
+  - {t: '{', h: LCMD}
+  - {t: (, h: numpad}
+  - {t: Shift, h: navigation, s: Caps Word}
+  - {t: SPC, h: symbols}
+  - {t: ), h: LCMD}
+  - {t: '}', h: Alt}
+  Qwerty:
+  - {t: ▽, type: trans}
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ''''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - {t: /, s: \}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Dvorak:
+  - {t: ▽, type: trans}
+  - ''''
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - P
+  - Y
+  - F
+  - G
+  - C
+  - R
+  - L
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - A
+  - O
+  - E
+  - U
+  - I
+  - D
+  - H
+  - T
+  - N
+  - S
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: /, s: \}
+  - Q
+  - J
+  - K
+  - X
+  - B
+  - M
+  - W
+  - V
+  - Z
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  numpad:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  navigation:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Pg Up
+  - ''
+  - ''
+  - ''
+  - ''
+  - ⌦
+  - ''
+  - Shift
+  - Ctrl
+  - Alt
+  - LCMD
+  - Alt
+  - ''
+  - ←
+  - ↑
+  - →
+  - ''
+  - ⏎
+  - LCMD
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Pg Dn
+  - ''
+  - ↓
+  - ''
+  - ''
+  - Shift
+  - Ctrl
+  - {t: ▽, type: trans}
+  - {type: held}
+  - ␣
+  - Home
+  - End
+  function:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F7
+  - F8
+  - F9
+  - F12
+  - ''
+  - ''
+  - Shift
+  - Ctrl
+  - Alt
+  - LCMD
+  - Alt
+  - ''
+  - F4
+  - F5
+  - F6
+  - F11
+  - ''
+  - LCMD
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F1
+  - F2
+  - F3
+  - F10
+  - Shift
+  - Ctrl
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F10
+  - F11
+  - F12
+  symbols:
+  - '`'
+  - /
+  - '#'
+  - '*'
+  - '%'
+  - \
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ^
+  - '@'
+  - '-'
+  - '!'
+  - '='
+  - $
+  - Alt
+  - LCMD
+  - Alt
+  - Ctrl
+  - ''
+  - ''
+  - '~'
+  - <
+  - '>'
+  - +
+  - _
+  - '?'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&arrow_fn'
+  - '|'
+  - '&'
+  - {type: held}
+  - ''
+  - Alt
+  keyboard:
+  - Boot
+  - {t: Qwerty, h: toggle}
+  - ''
+  - Sft+Gui+ 4
+  - BRIGHTNESS INC
+  - Vol +
+  - Flash Dongle
+  - ''
+  - Out USB
+  - ''
+  - ''
+  - Boot
+  - ''
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - BT 5
+  - {t: Dvorak, h: toggle}
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - Hyper+ M
+  - {t: Colemak, h: toggle}
+  - Bri -
+  - Vol -
+  - MUTE
+  - ''
+  - ''
+  - ''
+  - ''
+  - CAPSLOCK
+  - ⏮️
+  - PLAY PAUSE
+  - ⏭️
+  - ''
+  - ''
+  - ''
+  vim & tmux:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&tmux D'
+  - '&vtab N7'
+  - '&vtab N8'
+  - '&vtab N9'
+  - ''
+  - '&vimQ'
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&tmux A'
+  - '&vtab NUMBER_4'
+  - '&vtab N5'
+  - '&vtab NUMBER_6'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&tmux C'
+  - '&vtab N1'
+  - '&vtab N2'
+  - '&vtab N3'
+  - ''
+  - '&vldr Q'
+  - ''
+  - ''
+  - ''
+  - '&vldr W'
+  - '&tmux N'
+  - '&vtab N0'
+  flash mode:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
