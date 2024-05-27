@@ -3,6 +3,7 @@ parse_config:
   raw_binding_map:
     '&sys_reset': Reset
     '&bootloader': Boot
+    '&flash': Flash Dongle
     '&swapper': Win Next
     '&caps_word': Caps Word
     '&inv_qm': ¿
@@ -25,6 +26,12 @@ parse_config:
     '&bt BT_SEL 2': BT 3
     '&bt BT_SEL 3': BT 4
     '&bt BT_SEL 4': BT 5
+
+    '&bt_key 0 0': BT 1
+    '&bt_key 1 1': BT 2
+    '&bt_key 2 2': BT 3
+    '&bt_key 3 3': BT 4
+    '&bt_key 4 4': BT 5
 
     '&mmv MOVE_UP': Mouse ↑
     '&mmv MOVE_DOWN': Mouse ↓
@@ -65,10 +72,11 @@ parse_config:
 
   zmk_keycode_map:
     # custom mappings
-    C_VOL_UP: Vol Up
-    C_VOL_DN: Vol Down
+    C_VOL_UP: Vol +
+    C_VOL_DN: Vol -
     C_AL_CALC: Calc
-    C_PP: Play Pause
+    C_BRI_UP: Bri +
+    C_BRI_DN: Bri -
 
     LCTRL: Ctrl
     RCTRL: Ctrl
@@ -82,11 +90,11 @@ parse_config:
     SPACE: ␣
     BSPC: ⌫
     RET: ⏎
-    TAB: ↹
+    TAB: ⇥
     DEL: ⌦
 
-    PG_UP: Page Up
-    PG_DN: Page Down
+    PG_UP: Pg Up
+    PG_DN: Pg Dn
     INS: Insert
     HOME: Home
     END: End
@@ -168,6 +176,7 @@ parse_config:
     TILDE2: '~'
     UNDER: _
     UNDERSCORE: _
+
 draw_config:
   footer_text: 'Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a>'
   dark_mode: auto

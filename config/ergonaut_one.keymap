@@ -3,6 +3,19 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define L_CLMK 0
+#define L_QRTY 1
+#define L_DVRK 2
+#define L_NUM  3
+#define L_NAV  4
+#define L_FNC  5
+#define L_SYM  6
+#define L_KBD  7
+#define L_VIM  8
+#define LMO_N  9
+#define LTOGN  10
+#define L_BOOT 11
+
 // Macro for bluetooth connections
 #define BT_(btnum) &bt_key btnum btnum
 
@@ -27,18 +40,18 @@
         compatible = "zmk,conditional-layers";
 
         function_combination {
-            if-layers = <3 4>;
-            then-layer = <5>;
+            if-layers = <LMO_N L_NAV>;
+            then-layer = <L_FNC>;
         };
 
         numpad_momentary {
-            if-layers = <10>;
-            then-layer = <3>;
+            if-layers = <LMO_N>;
+            then-layer = <L_NUM>;
         };
 
         numpad_toggle {
-            if-layers = <11>;
-            then-layer = <3>;
+            if-layers = <LTOGN>;
+            then-layer = <L_NUM>;
         };
     };
 
@@ -69,7 +82,7 @@
         flash: flash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 11 &bootloader>;
+            bindings = <&to L_BOOT &bootloader>;
             label = "Flash Dongle";
         };
 
@@ -162,15 +175,31 @@
         compatible = "zmk,keymap";
 
         Colemak {
+//                       ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            display-name = "Colemak"               ;
+//                       ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
             bindings = <
-&kp TAB                 &kp Q  &kp W  &kp F                &kp P                   &kp B       &kp J        &kp L                       &kp U                     &kp Y  &kp SQT  &kp BACKSPACE
-&lt 8 ESC               &kp A  &kp R  &kp S                &kp T                   &kp G       &kp M        &kp N                       &kp E                     &kp I  &kp O    &lt 7 RET
-&mt LCTRL LEFT_BRACKET  &kp Z  &kp X  &kp C                &kp D                   &kp V       &kp K        &kp H                       &comma                    &dot   &slash   &mt LEFT_SHIFT RIGHT_BRACKET
-                                      &mt LCMD LEFT_BRACE  &lt 9 LEFT_PARENTHESIS  &lsscw 4 0  &lt 6 SPACE  &mt LCMD RIGHT_PARENTHESIS  &mt LEFT_ALT RIGHT_BRACE
+// ┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓            ┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+// ┃  TAB  ┃   Q   ┃   W   ┃   F   ┃   P   ┃   B   ┃            ┃   J   ┃   L   ┃   U   ┃   Y   ┃  ' "  ┃ BKSPC ┃
+    &kp TAB  &kp Q   &kp W   &kp F   &kp P   &kp B                &kp J   &kp L   &kp U   &kp Y  &kp SQT &kp BSPC
+// ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
+// ┃ESC vim┃   A   ┃   R   ┃   S   ┃   T   ┃   G   ┃            ┃   M   ┃   N   ┃   E   ┃   I   ┃   O   ┃RET kbd┃
+  &lt 8 ESC  &kp A   &kp R   &kp S   &kp T   &kp G                &kp M   &kp N   &kp E   &kp I   &kp O &lt 7 RET
+// ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
+// ┃ [ ctrl┃   Z   ┃   X   ┃   C   ┃   D   ┃   V   ┃            ┃   K   ┃   H   ┃  , ;  ┃  . :  ┃  / \  ┃] shift┃
+&mt LCTRL LBKT &kp Z &kp X   &kp C   &kp D   &kp V                &kp K   &kp H   &comma  &dot &slash &mt LSHFT RBKT
+// ┗━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━┓    ┏━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
+//                             ┃ { cmd ┃ ( num ┃ SHIFT ┃    ┃ SPACE ┃ ) kbd ┃ } opt ┃
+                     &mt LCMD LBRC &lt 9 LPAR &lsscw 4 0    &lt 6 SPC &mt LCMD RPAR &mt LALT RBRC
+//                             ┗━━━━━━━┻━━━━━━━┫  nav  ┃    ┃  sym  ┣━━━━━━━┻━━━━━━━┛
+//                                             ┗━━━━━━━┛    ┗━━━━━━━┛
             >;
         };
 
         Qwerty {
+//                       ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            display-name = "Qwerty"                ;
+//                       ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
             bindings = <
 &trans  &kp Q  &kp W  &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I   &kp O  &kp P     &trans
 &trans  &kp A  &kp S  &kp D   &kp F   &kp G   &kp H   &kp J   &kp K   &kp L  &kp APOS  &trans
@@ -180,6 +209,9 @@
         };
 
         Dvorak {
+//                       ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            display-name = "Dvorak"                ;
+//                       ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
             bindings = <
 &trans  &kp SQT  &comma  &dot    &kp P   &kp Y   &kp F   &kp G   &kp C   &kp R  &kp L  &trans
 &trans  &kp A    &kp O   &kp E   &kp U   &kp I   &kp D   &kp H   &kp T   &kp N  &kp S  &trans
@@ -189,6 +221,9 @@
         };
 
         numpad {
+//                       ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            display-name = "numpad"                ;
+//                       ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
             bindings = <
 &kp TAB   &none  &none      &none      &none     &none     &kp FSLH   &kp N7  &kp N8   &kp N9  &kp MINUS  &kp BSPC
 &tog 10   &none  &kp LCTRL  &kp LALT   &kp LCMD  &kp RALT  &kp STAR   &kp N4  &kp N5   &kp N6  &kp PLUS   &kp ENTER
@@ -198,6 +233,9 @@
         };
 
         navigation {
+//                       ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            display-name = "navigation"            ;
+//                       ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
             bindings = <
 &none     &none      &none      &none      &none     &none     &kp PG_UP  &none     &none     &none      &none  &kp DEL
 &none     &kp LSHFT  &kp LCTRL  &kp LALT   &kp LCMD  &kp RALT  &none      &kp LEFT  &kp UP    &kp RIGHT  &none  &kp RET
@@ -207,6 +245,9 @@
         };
 
         function {
+//                       ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            display-name = "function"              ;
+//                       ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
             bindings = <
 &none     &none      &none      &none      &none     &none     &none    &kp F7   &kp F8   &kp F9  &kp F12  &none
 &none     &kp LSHFT  &kp LCTRL  &kp LALT   &kp LCMD  &kp RALT  &none    &kp F4   &kp F5   &kp F6  &kp F11  &none
@@ -216,6 +257,9 @@
         };
 
         symbols {
+//                       ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            display-name = "symbols"               ;
+//                       ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
             bindings = <
 &kp GRAVE  &kp SLASH  &kp HASH   &kp STAR   &kp PRCNT  &kp BSLH   &none     &none     &none     &none      &none  &none
 &kp CARET  &kp AT     &kp MINUS  &kp EXCL   &kp EQUAL  &kp DLLR   &kp RALT  &kp LCMD  &kp LALT  &kp LCTRL  &none  &none
@@ -225,6 +269,9 @@
         };
 
         keyboard {
+//                       ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            display-name = "keyboard"              ;
+//                       ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
             bindings = <
 &bootloader  &to 1         &none                  &kp LS(LG(N4))  &kp C_BRIGHTNESS_INC  &kp C_VOL_UP  &flash      &none  &out OUT_USB  &none  &none  &bootloader
 &none        BT_(0)        BT_(1)                 BT_(2)          BT_(3)                BT_(4)        &to 2       &none  &none         &none  &none  &trans
@@ -234,6 +281,9 @@
         };
 
         vim {
+//                       ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            display-name = "vim & tmux"            ;
+//                       ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
             bindings = <
 &none   &none  &none  &none  &none  &none  &tmux D  &vtab N7        &vtab N8  &vtab N9        &none  &vimQ
 &trans  &none  &none  &none  &none  &none  &tmux A  &vtab NUMBER_4  &vtab N5  &vtab NUMBER_6  &none  &none
@@ -243,30 +293,17 @@
         };
 
         num_pad {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
-            >;
+            bindings = <&kp KP_NUM>;
         };
 
         numpad_toggle {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
-            >;
+            bindings = <&kp KP_NUM>;
         };
 
         bootloader {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
-            >;
+            display-name = "Flash Mode";
+            bindings = <&bootloader>;
+        };
         };
     };
 };
