@@ -327,7 +327,6 @@ layers:
   - {t: ▽, type: trans}
   - ''
   - ''
-  - ''
   - Hyper+ M
   - {t: Colemak, h: toggle}
   - Bright -
@@ -338,9 +337,9 @@ layers:
   - ''
   - ''
   - Caps Lock
-  - {t: ⏮️, type: held}
+  - ⏮️
   - {t: PLAY PAUSE, type: held}
-  - ⏭️
+  - {t: ⏭️, type: held}
   - ''
   - ''
   - ''

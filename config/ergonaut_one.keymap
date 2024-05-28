@@ -69,7 +69,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp EQUAL &kp GT &kp SPACE>;
-            label = "ARROW_FN";
         };
 
         bt_clr: bluetooth_clear_macro {
@@ -92,35 +91,30 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to L_BOOT &bootloader>;
-            label = "Flash Dongle";
         };
 
         vtab: vtab {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&kp ESC &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp G &kp T>;
-            label = "VTAB";
         };
 
         vldr: vldr {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&kp ESCAPE &kp SPACE &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "VLDR";
         };
 
         vimQ: vimQ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp ESCAPE &kp COLON &kp Q &kp EXCL &kp RET>;
-            label = "VIMQ";
         };
 
         tmux: tmux {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&kp LC(B) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TMUX";
         };
     };
 
@@ -135,7 +129,6 @@
 
         sscw: sscw {
             compatible = "zmk,behavior-mod-morph";
-            label = "Sticky Shift Caps Word";
             bindings = <&sk LSHFT>, <&caps_word>;
 
             #binding-cells = <0>;
@@ -144,7 +137,6 @@
 
         lsscw: lsscw {
             compatible = "zmk,behavior-hold-tap";
-            label = "Layer Sticky Shift Caps Word";
             bindings = <&mo>, <&sscw>;
 
             #binding-cells = <2>;
@@ -154,7 +146,6 @@
 
         comma: comma {
             compatible = "zmk,behavior-mod-morph";
-            label = "Comma Semicolon";
             bindings = <&kp COMMA>, <&kp SEMI>;
 
             #binding-cells = <0>;
@@ -163,7 +154,6 @@
 
         dot: dot {
             compatible = "zmk,behavior-mod-morph";
-            label = "Dot Colon";
             bindings = <&kp DOT>, <&kp COLON>;
 
             #binding-cells = <0>;
@@ -172,7 +162,6 @@
 
         slash: slash {
             compatible = "zmk,behavior-mod-morph";
-            label = "Slash Backslash";
             bindings = <&kp SLASH>, <&kp BACKSLASH>;
 
             #binding-cells = <0>;
@@ -350,7 +339,7 @@
       ___    BT_(0)  BT_(1)  BT_(2)  BT_(3)  BT_(4)               &to 2    ___     ___     ___     ___    I___I
 // ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
 // ┃       ┃       ┃micmute┃Colemak┃ bri - ┃ vol - ┃            ┃ mute  ┃       ┃       ┃       ┃       ┃  CAPS ┃
-   ___ ___  &kp HYPR(M) &to 0 &kp C_BRI_DN &kp C_VOL_DN        &kp K_MUTE  ___     ___     ___     ___  &kp CAPS
+    ___ ___ HYPR(M) &to 0 &kp C_BRI_DN &kp C_VOL_DN            &kp K_MUTE  ___     ___     ___     ___  &kp CAPS
 // ┗━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━┓    ┏━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
 //                             ┃ prev  ┃ play  ┃ next  ┃    ┃       ┃       ┃       ┃
                         &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT ___     ___     ___
