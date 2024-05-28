@@ -12,7 +12,7 @@ layers:
   - Y
   - ''''
   - ⌫
-  - {t: Esc, h: numpad lock}
+  - {t: Esc, h: vim & tmux}
   - A
   - R
   - S
@@ -23,7 +23,7 @@ layers:
   - E
   - I
   - O
-  - {t: ⏎, h: numpad}
+  - {t: ⏎, h: keyboard}
   - {t: '[', h: Ctrl}
   - Z
   - X
@@ -38,8 +38,8 @@ layers:
   - {t: ']', h: ⇧}
   - {t: '{', h: ⌘}
   - {t: (, h: numpad}
-  - {t: Sticky Shift, h: symbols, s: Caps Word}
-  - {t: ␣, h: vim & tmux}
+  - {t: Sticky Shift, h: navigation, s: Caps Word}
+  - {t: ␣, h: symbols}
   - {t: ), h: ⌘}
   - {t: '}', h: ⌥}
   Qwerty:
@@ -129,48 +129,48 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   numpad:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ⇥
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - /
+  - '7'
+  - '8'
+  - '9'
+  - '-'
+  - ⌫
+  - {t: numpad, h: toggle}
+  - ''
+  - Ctrl
+  - ⌥
+  - ⌘
+  - Alt
+  - '*'
+  - '4'
+  - '5'
+  - '6'
+  - +
+  - ENTER
+  - Ctrl
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ':'
+  - '1'
+  - '2'
+  - '3'
+  - '='
+  - ⇥
+  - ⌘
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ','
+  - '0'
+  - .
   navigation:
   - ''
   - ''
@@ -210,7 +210,7 @@ layers:
   - ⇧
   - ⌘
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - ␣
   - Home
   - End
@@ -252,8 +252,8 @@ layers:
   - F10
   - ⇧
   - ⌘
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
   - F10
   - F11
   - F12
@@ -296,8 +296,8 @@ layers:
   - ''
   - '&arrow_fn'
   - '|'
-  - {t: '&', type: held}
-  - {t: ▽, type: trans}
+  - '&'
+  - {type: held}
   - ''
   - ⌥
   keyboard:
@@ -324,7 +324,7 @@ layers:
   - ''
   - ''
   - ''
-  - {t: ▽, type: trans}
+  - {type: held}
   - ''
   - ''
   - Hyper+ M
@@ -338,8 +338,8 @@ layers:
   - ''
   - Caps Lock
   - ⏮️
-  - {t: PLAY PAUSE, type: held}
-  - {t: ⏭️, type: held}
+  - PLAY PAUSE
+  - ⏭️
   - ''
   - ''
   - ''
@@ -356,7 +356,7 @@ layers:
   - '&vtab N9'
   - ''
   - '&vimQ'
-  - {t: ▽, type: trans}
+  - {type: held}
   - ''
   - ''
   - ''
@@ -383,52 +383,9 @@ layers:
   - ''
   - ''
   - ''
-  - {t: '&vldr W', type: held}
+  - '&vldr W'
   - '&tmux N'
   - '&vtab N0'
-  numpad lock:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   flash mode:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
