@@ -49,6 +49,8 @@ parse_config:
     '&mkp MB4': Back Click
     '&mkp MB5': Forward Click
 
+    '&sk LSHFT': Sticky Shift
+
   zmk_combos:
     combo_tab:    {align: top, o: 0.15}
     combo_del:    {align: top, o: 0.15}
@@ -75,19 +77,22 @@ parse_config:
     C_VOL_UP: Vol +
     C_VOL_DN: Vol -
     C_AL_CALC: Calc
-    C_BRI_UP: Bri +
-    C_BRI_DN: Bri -
+    C_BRI_UP: Bright +
+    C_BRI_DN: Bright -
 
     LCTRL: Ctrl
     RCTRL: Ctrl
-    LALT: Alt
+    LALT: ⌥
     RALT: Alt
     LGUI: Gui
     RGUI: Gui
-    LSHFT: Shift
-    RSHFT: Shift
+    LCMD: ⌘
+    RCMD: ⌘
+    LSHFT: ⇧
+    RSHFT: ⇧
     ESC: Esc
     SPACE: ␣
+    SPC: ␣
     BSPC: ⌫
     RET: ⏎
     TAB: ⇥

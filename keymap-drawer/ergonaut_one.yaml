@@ -12,7 +12,7 @@ layers:
   - Y
   - ''''
   - ⌫
-  - {t: Esc, h: vim & tmux}
+  - {t: Esc, h: numpad lock}
   - A
   - R
   - S
@@ -23,7 +23,7 @@ layers:
   - E
   - I
   - O
-  - {t: ⏎, h: keyboard}
+  - {t: ⏎, h: numpad}
   - {t: '[', h: Ctrl}
   - Z
   - X
@@ -35,13 +35,13 @@ layers:
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - {t: /, s: \}
-  - {t: ']', h: Shift}
-  - {t: '{', h: LCMD}
+  - {t: ']', h: ⇧}
+  - {t: '{', h: ⌘}
   - {t: (, h: numpad}
-  - {t: Shift, h: navigation, s: Caps Word}
-  - {t: SPC, h: symbols}
-  - {t: ), h: LCMD}
-  - {t: '}', h: Alt}
+  - {t: Sticky Shift, h: symbols, s: Caps Word}
+  - {t: ␣, h: vim & tmux}
+  - {t: ), h: ⌘}
+  - {t: '}', h: ⌥}
   Qwerty:
   - {t: ▽, type: trans}
   - Q
@@ -152,7 +152,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -185,18 +185,18 @@ layers:
   - ''
   - ⌦
   - ''
-  - Shift
+  - ⇧
   - Ctrl
-  - Alt
-  - LCMD
+  - ⌥
+  - ⌘
   - Alt
   - ''
   - ←
   - ↑
   - →
   - ''
-  - ⏎
-  - LCMD
+  - ENTER
+  - Ctrl
   - ''
   - ''
   - ''
@@ -207,10 +207,10 @@ layers:
   - ↓
   - ''
   - ''
-  - Shift
-  - Ctrl
+  - ⇧
+  - ⌘
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - ␣
   - Home
   - End
@@ -228,10 +228,10 @@ layers:
   - F12
   - ''
   - ''
-  - Shift
+  - ⇧
   - Ctrl
-  - Alt
-  - LCMD
+  - ⌥
+  - ⌘
   - Alt
   - ''
   - F4
@@ -239,7 +239,7 @@ layers:
   - F6
   - F11
   - ''
-  - LCMD
+  - Ctrl
   - ''
   - ''
   - ''
@@ -250,8 +250,8 @@ layers:
   - F2
   - F3
   - F10
-  - Shift
-  - Ctrl
+  - ⇧
+  - ⌘
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - F10
@@ -277,8 +277,8 @@ layers:
   - '='
   - $
   - Alt
-  - LCMD
-  - Alt
+  - ⌘
+  - ⌥
   - Ctrl
   - ''
   - ''
@@ -296,16 +296,16 @@ layers:
   - ''
   - '&arrow_fn'
   - '|'
-  - '&'
-  - {type: held}
+  - {t: '&', type: held}
+  - {t: ▽, type: trans}
   - ''
-  - Alt
+  - ⌥
   keyboard:
   - Boot
   - {t: Qwerty, h: toggle}
   - ''
-  - Sft+Gui+ 4
-  - BRIGHTNESS INC
+  - Gui+Sft+ 4
+  - Bright +
   - Vol +
   - Flash Dongle
   - ''
@@ -324,21 +324,22 @@ layers:
   - ''
   - ''
   - ''
-  - {type: held}
+  - {t: ▽, type: trans}
+  - ''
   - ''
   - ''
   - Hyper+ M
   - {t: Colemak, h: toggle}
-  - Bri -
+  - Bright -
   - Vol -
   - MUTE
   - ''
   - ''
   - ''
   - ''
-  - CAPSLOCK
-  - ⏮️
-  - PLAY PAUSE
+  - Caps Lock
+  - {t: ⏮️, type: held}
+  - {t: PLAY PAUSE, type: held}
   - ⏭️
   - ''
   - ''
@@ -356,16 +357,16 @@ layers:
   - '&vtab N9'
   - ''
   - '&vimQ'
-  - {type: held}
+  - {t: ▽, type: trans}
   - ''
   - ''
   - ''
   - ''
   - ''
   - '&tmux A'
-  - '&vtab NUMBER_4'
+  - '&vtab N4'
   - '&vtab N5'
-  - '&vtab NUMBER_6'
+  - '&vtab N6'
   - ''
   - ''
   - ''
@@ -383,9 +384,52 @@ layers:
   - ''
   - ''
   - ''
-  - '&vldr W'
+  - {t: '&vldr W', type: held}
   - '&tmux N'
   - '&vtab N0'
+  numpad lock:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   flash mode:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
