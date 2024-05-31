@@ -331,7 +331,7 @@ layers:
   - {t: Colemak, h: toggle}
   - Bright -
   - Vol -
-  - MUTE
+  - ''
   - ''
   - ''
   - ''
@@ -340,7 +340,7 @@ layers:
   - ⏮️
   - PLAY PAUSE
   - ⏭️
-  - ''
+  - MUTE
   - ''
   - ''
   vim & tmux:

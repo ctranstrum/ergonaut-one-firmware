@@ -355,11 +355,11 @@
 // ┃         ┃  BT 1   ┃  BT 2   ┃  BT 3   ┃  BT 4   ┃  BT 5   ┃             ┃ Dvorak┃       ┃       ┃       ┃       ┃  ###  ┃
        ___      BT_(0)    BT_(1)    BT_(2)    BT_(3)    BT_(4)               &to L_DVRK ___     ___     ___     ___    I___I
 // ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫             ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
-// ┃         ┃         ┃mic mute ┃ Colemak ┃  bri -  ┃  vol -  ┃             ┃ mute  ┃       ┃       ┃       ┃       ┃  CAPS ┃
-       ___       ___   HYPR(M) &to L_CLMK &kp C_BRI_DN &kp C_VOL_DN          &kp K_MUTE ___     ___     ___     ___  &kp CAPS
+// ┃         ┃         ┃mic mute ┃ Colemak ┃  bri -  ┃  vol -  ┃             ┃       ┃       ┃       ┃       ┃       ┃  CAPS ┃
+       ___       ___   HYPR(M) &to L_CLMK &kp C_BRI_DN &kp C_VOL_DN             ___     ___     ___     ___     ___  &kp CAPS
 // ┗━━━━━━━━━┻━━━━━━━━━┻━━━━━━━━━┻━━━━┳━━━━┻━━━━┳━━━━┻━━━━┳━━━━┻━━━━┓    ┏━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
-//                                    ┃  prev   ┃  play   ┃  next   ┃    ┃       ┃       ┃       ┃
-                               &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT       ___     ___     ___
+//                                    ┃  prev   ┃  play   ┃  next   ┃    ┃ mute  ┃       ┃       ┃
+                               &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT    &kp K_MUTE ___     ___
 //                                    ┗━━━━━━━━━┻━━━━━━━━━┫         ┃    ┃       ┣━━━━━━━┻━━━━━━━┛
 //                                                        ┗━━━━━━━━━┛    ┗━━━━━━━┛
             >;
