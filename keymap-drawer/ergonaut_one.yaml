@@ -12,7 +12,7 @@ layers:
   - Y
   - ''''
   - ⌫
-  - {t: Esc, h: vim & tmux}
+  - {t: esc, h: vim & tmux}
   - A
   - R
   - S
@@ -24,7 +24,7 @@ layers:
   - I
   - O
   - {t: ⏎, h: keyboard}
-  - {t: '[', h: Ctrl}
+  - {t: '[', h: ctrl}
   - Z
   - X
   - C
@@ -38,10 +38,10 @@ layers:
   - {t: ']', h: ⇧}
   - {t: '{', h: ⌥}
   - {t: (, h: numpad}
-  - {t: Sticky Shift, h: navigation, s: Caps Word}
+  - {t: sticky shift, h: navigation, s: caps word}
   - {t: ␣, h: symbols}
   - {t: ), h: ⌘}
-  - {t: '}', h: Alt}
+  - {t: '}', h: alt}
   Qwerty:
   - {t: ▽, type: trans}
   - Q
@@ -143,17 +143,17 @@ layers:
   - ⌫
   - {t: numpad, h: toggle}
   - Gui+ A
-  - Ctrl
+  - ctrl
   - ⌥
   - ⌘
-  - Alt
+  - alt
   - '*'
   - '4'
   - '5'
   - '6'
   - +
   - ENTER
-  - Ctrl
+  - ctrl
   - Gui+ Z
   - Gui+ X
   - Gui+ C
@@ -178,7 +178,7 @@ layers:
   - ''
   - ''
   - ''
-  - Pg Up
+  - pg up
   - ''
   - ''
   - ''
@@ -186,23 +186,23 @@ layers:
   - ⌦
   - ''
   - ⇧
-  - Ctrl
+  - ctrl
   - ⌥
   - ⌘
-  - Alt
+  - alt
   - ''
   - ←
   - ↑
   - →
   - ''
   - ENTER
-  - Ctrl
+  - ctrl
   - Gui+ Z
   - Gui+ X
   - Gui+ C
   - Gui+ D
   - Gui+ V
-  - Pg Dn
+  - pg dn
   - ''
   - ↓
   - ''
@@ -212,8 +212,8 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - ␣
-  - Home
-  - End
+  - home
+  - end
   function:
   - ''
   - ''
@@ -229,17 +229,17 @@ layers:
   - ''
   - ''
   - ⇧
-  - Ctrl
+  - ctrl
   - ⌥
   - ⌘
-  - Alt
+  - alt
   - ''
   - F4
   - F5
   - F6
   - F11
   - ''
-  - Ctrl
+  - ctrl
   - ''
   - ''
   - ''
@@ -276,10 +276,10 @@ layers:
   - '!'
   - '='
   - $
-  - Alt
+  - alt
   - ⌘
   - ⌥
-  - Ctrl
+  - ctrl
   - ''
   - ''
   - '~'
@@ -294,25 +294,25 @@ layers:
   - ''
   - ''
   - ''
-  - '&arrow_fn'
+  - =>
   - '|'
   - '&'
   - {type: held}
   - ''
-  - Alt
+  - alt
   keyboard:
-  - Boot
+  - boot
   - {t: Qwerty, h: toggle}
   - ''
   - Gui+Sft+ 4
-  - Bright +
-  - Vol +
-  - Flash Dongle
+  - bright +
+  - vol +
+  - dongle flash
   - ''
-  - Out USB
+  - USB
   - ''
   - ''
-  - Boot
+  - boot
   - ''
   - BT 1
   - BT 2
@@ -329,16 +329,16 @@ layers:
   - ''
   - Hyper+ M
   - {t: Colemak, h: toggle}
-  - Bright -
-  - Vol -
+  - bright -
+  - vol -
   - ''
   - ''
   - ''
   - ''
   - ''
-  - Caps Lock
+  - caps lock
   - ⏮️
-  - PLAY PAUSE
+  - ⏯
   - ⏭️
   - MUTE
   - ''
