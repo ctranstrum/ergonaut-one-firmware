@@ -272,8 +272,8 @@
 // ┃  ctrl ┃ cmd z ┃ cmd x ┃ cmd c ┃ cmd d ┃ cmd v ┃            ┃   :   ┃   1   ┃   2   ┃   3   ┃   =   ┃  TAB  ┃
    &kp LCTRL CMD(Z)  CMD(X)  CMD(C)  CMD(D)  CMD(V)             &kp COLON &kp N1 &kp N2 &kp N3  &kp EQUAL &kp TAB
 // ┗━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━┓    ┏━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
-//                             ┃  opt  ┃  ###  ┃ SHIFT ┃    ┃   ,   ┃   0   ┃   .   ┃
-                               &kp LALT  I___I   I___I      &kp COMMA &kp N0 &kp DOT
+//                             ┃  opt  ┃  ###  ┃ SHIFT ┃    ┃   ,   ┃ 0 cmd ┃ . alt ┃
+                               &kp LALT  I___I   I___I &kp COMMA &mt LCMD N0 &mt RALT DOT
 //                             ┗━━━━━━━┻━━━━━━━┫  nav  ┃    ┃       ┣━━━━━━━┻━━━━━━━┛
 //                                             ┗━━━━━━━┛    ┗━━━━━━━┛
             >;
@@ -294,8 +294,8 @@
 // ┃  ctrl ┃ cmd z ┃ cmd x ┃ cmd c ┃ cmd d ┃ cmd v ┃            ┃ Pg Dn ┃       ┃   ↓   ┃       ┃       ┃ shift ┃
    &kp LCTRL CMD(Z)  CMD(X)  CMD(C)  CMD(D)  CMD(V)             &kp PG_DN  ___   &kp DOWN  ___     ___  &kp LSHFT
 // ┗━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━┓    ┏━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
-//                             ┃  opt  ┃  num  ┃  ###  ┃    ┃ SPACE ┃ HOME  ┃  END  ┃
-                               &kp LALT  I___I   I___I       &kp SPC &kp HOME &kp END
+//                             ┃  opt  ┃  num  ┃  ###  ┃    ┃ SPACE ┃HOMEcmd┃END alt┃
+                               &kp LALT  I___I   I___I &kp SPC &mt LCMD HOME &mt RALT END
 //                             ┗━━━━━━━┻━━━━━━━┫       ┃    ┃       ┣━━━━━━━┻━━━━━━━┛
 //                                             ┗━━━━━━━┛    ┗━━━━━━━┛
             >;
@@ -316,8 +316,8 @@
 // ┃  ctrl ┃       ┃       ┃       ┃       ┃       ┃            ┃       ┃  F1   ┃  F2   ┃  F3   ┃  F10  ┃ shift ┃
    &kp LCTRL  ___     ___     ___     ___     ___                  ___   &kp F1  &kp F2  &kp F3  &kp F10 &kp LSHFT
 // ┗━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━┓    ┏━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
-//                             ┃  opt  ┃  ###  ┃  ###  ┃    ┃  F10  ┃  F11  ┃  F12  ┃
-                               &kp LALT  I___I   I___I       &kp F10 &kp F11 &kp F12
+//                             ┃  opt  ┃  ###  ┃  ###  ┃    ┃  F10  ┃F11 cmd┃F12 alt┃
+                               &kp LALT  I___I   I___I  &kp F10 &mt LCMD F11 &mt RALT F12
 //                             ┗━━━━━━━┻━━━━━━━┫       ┃    ┃       ┣━━━━━━━┻━━━━━━━┛
 //                                             ┗━━━━━━━┛    ┗━━━━━━━┛
             >;
@@ -335,8 +335,8 @@
 // ┃   ^   ┃   @   ┃   -   ┃   !   ┃   =   ┃   $   ┃            ┃  alt  ┃  cmd  ┃  opt  ┃  ctrl ┃       ┃       ┃
 &kp CARET &kp AT &kp MINUS &kp EXCL &kp EQUAL &kp DLLR          &kp RALT &kp LCMD &kp LALT &kp LCTRL ___   ___
 // ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
-// ┃   ~   ┃   <   ┃   >   ┃   +   ┃   _   ┃   ?   ┃            ┃       ┃       ┃       ┃       ┃       ┃       ┃
- &kp TILDE &kp LT &kp GT &kp PLUS &kp UNDER &kp QMARK              ___     ___     ___     ___     ___     ___
+// ┃ ~ ctrl┃   <   ┃   >   ┃   +   ┃   _   ┃   ?   ┃            ┃       ┃       ┃       ┃       ┃       ┃       ┃
+&mt LCTRL TILDE &kp LT &kp GT &kp PLUS &kp UNDER &kp QMARK         ___     ___     ___     ___     ___     ___
 // ┗━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━┓    ┏━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
 //                             ┃  =>   ┃   |   ┃   &   ┃    ┃  ###  ┃       ┃  alt  ┃
                               &arrow_fn &kp PIPE &kp AMPS     I___I    ___   &kp RALT

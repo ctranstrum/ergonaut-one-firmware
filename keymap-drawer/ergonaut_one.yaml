@@ -169,8 +169,8 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - ','
-  - '0'
-  - .
+  - {t: '0', h: ⌘}
+  - {t: ., h: alt}
   navigation:
   - ''
   - ''
@@ -212,8 +212,8 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - ␣
-  - home
-  - end
+  - {t: home, h: ⌘}
+  - {t: end, h: alt}
   function:
   - ''
   - ''
@@ -255,8 +255,8 @@ layers:
   - {type: held}
   - {type: held}
   - F10
-  - F11
-  - F12
+  - {t: F11, h: ⌘}
+  - {t: F12, h: alt}
   symbols:
   - '`'
   - /
@@ -282,7 +282,7 @@ layers:
   - ctrl
   - ''
   - ''
-  - '~'
+  - {t: '~', h: ctrl}
   - <
   - '>'
   - +
