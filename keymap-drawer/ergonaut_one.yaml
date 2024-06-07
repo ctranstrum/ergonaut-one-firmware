@@ -304,7 +304,7 @@ layers:
   - boot
   - {t: Qwerty, h: toggle}
   - ''
-  - Gui+Sft+ 4
+  - scrn copy
   - bright +
   - vol +
   - dongle flash
@@ -313,7 +313,7 @@ layers:
   - ''
   - ''
   - boot
-  - ''
+  - scrn lock
   - BT 1
   - BT 2
   - BT 3
@@ -327,7 +327,7 @@ layers:
   - {type: held}
   - ''
   - ''
-  - Hyper+ M
+  - mic mute
   - {t: Colemak, h: toggle}
   - bright -
   - vol -

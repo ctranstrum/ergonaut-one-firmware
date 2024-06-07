@@ -1350,7 +1350,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(196, 28)" class="key keypos-3">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em" style="font-size: 88%">Gui+Sft+</tspan><tspan x="0" dy="1.2em" style="font-size: 88%">4</tspan>
+<tspan x="0" dy="-0.6em">scrn</tspan><tspan x="0" dy="1.2em">copy</tspan>
 </text>
 </g>
 <g transform="translate(252, 35)" class="key keypos-4">
@@ -1390,6 +1390,9 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(28, 105)" class="key keypos-12">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">scrn</tspan><tspan x="0" dy="1.2em">lock</tspan>
+</text>
 </g>
 <g transform="translate(84, 105)" class="key keypos-13">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1450,7 +1453,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(140, 147)" class="key keypos-26">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">Hyper+</tspan><tspan x="0" dy="1.2em">M</tspan>
+<tspan x="0" dy="-0.6em">mic</tspan><tspan x="0" dy="1.2em">mute</tspan>
 </text>
 </g>
 <g transform="translate(196, 140)" class="key keypos-27">

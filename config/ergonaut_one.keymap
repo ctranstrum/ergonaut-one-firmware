@@ -354,8 +354,8 @@
 // ┃   boot  ┃  Qwerty ┃         ┃ scrn cp ┃  bri +  ┃  vol +  ┃             ┃ dongle┃       ┃  USB  ┃       ┃       ┃ boot  ┃
   &bootloader &to L_QRTY   ___  GS(N4) &kp C_BRI_UP &kp C_VOL_UP              &flash    ___ &out OUT_USB ___    ___  &bootloader
 // ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫             ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
-// ┃         ┃  BT 1   ┃  BT 2   ┃  BT 3   ┃  BT 4   ┃  BT 5   ┃             ┃ Dvorak┃       ┃       ┃       ┃       ┃  ###  ┃
-       ___      BT_(0)    BT_(1)    BT_(2)    BT_(3)    BT_(4)               &to L_DVRK ___     ___     ___     ___    I___I
+// ┃ scrn lk ┃  BT 1   ┃  BT 2   ┃  BT 3   ┃  BT 4   ┃  BT 5   ┃             ┃ Dvorak┃       ┃       ┃       ┃       ┃  ###  ┃
+      GC(Q)     BT_(0)    BT_(1)    BT_(2)    BT_(3)    BT_(4)               &to L_DVRK ___     ___     ___     ___    I___I
 // ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫             ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
 // ┃         ┃         ┃mic mute ┃ Colemak ┃  bri -  ┃  vol -  ┃             ┃       ┃       ┃       ┃       ┃       ┃  CAPS ┃
        ___       ___   HYPR(M) &to L_CLMK &kp C_BRI_DN &kp C_VOL_DN             ___     ___     ___     ___     ___  &kp CAPS
