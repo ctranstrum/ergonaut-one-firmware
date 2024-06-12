@@ -281,7 +281,7 @@ layers:
   - ⌥
   - ctrl
   - ''
-  - ''
+  - GLOBE
   - {t: '~', h: ctrl}
   - <
   - '>'

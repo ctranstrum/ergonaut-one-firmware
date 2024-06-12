@@ -332,8 +332,8 @@
 // ┃   `   ┃   /   ┃   #   ┃   *   ┃   %   ┃   \   ┃            ┃       ┃       ┃       ┃       ┃       ┃       ┃
 &kp GRAVE &kp SLASH &kp HASH &kp STAR &kp PRCNT &kp BSLH           ___     ___     ___     ___     ___     ___
 // ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
-// ┃   ^   ┃   @   ┃   -   ┃   !   ┃   =   ┃   $   ┃            ┃  alt  ┃  cmd  ┃  opt  ┃  ctrl ┃       ┃       ┃
-&kp CARET &kp AT &kp MINUS &kp EXCL &kp EQUAL &kp DLLR          &kp RALT &kp LCMD &kp LALT &kp LCTRL ___   ___
+// ┃   ^   ┃   @   ┃   -   ┃   !   ┃   =   ┃   $   ┃            ┃  alt  ┃  cmd  ┃  opt  ┃  ctrl ┃       ┃ globe ┃
+&kp CARET &kp AT &kp MINUS &kp EXCL &kp EQUAL &kp DLLR         &kp RALT &kp LCMD &kp LALT &kp LCTRL ___ &kp GLOBE
 // ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
 // ┃ ~ ctrl┃   <   ┃   >   ┃   +   ┃   _   ┃   ?   ┃            ┃       ┃       ┃       ┃       ┃       ┃       ┃
 &mt LCTRL TILDE &kp LT &kp GT &kp PLUS &kp UNDER &kp QMARK         ___     ___     ___     ___     ___     ___
