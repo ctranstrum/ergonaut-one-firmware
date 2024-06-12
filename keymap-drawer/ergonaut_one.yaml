@@ -132,7 +132,7 @@ layers:
   - ⇥
   - ''
   - ''
-  - ''
+  - {t: numpad, h: toggle}
   - ''
   - ''
   - /
@@ -141,7 +141,7 @@ layers:
   - '9'
   - '-'
   - ⌫
-  - {t: numpad, h: toggle}
+  - GLOBE
   - Gui+ A
   - ctrl
   - ⌥
@@ -184,7 +184,7 @@ layers:
   - ''
   - ''
   - ⌦
-  - ''
+  - GLOBE
   - ⇧
   - ctrl
   - ⌥
@@ -227,7 +227,7 @@ layers:
   - F9
   - F12
   - ''
-  - ''
+  - GLOBE
   - ⇧
   - ctrl
   - ⌥
@@ -298,7 +298,7 @@ layers:
   - '|'
   - '&'
   - {type: held}
-  - ''
+  - ⌘
   - alt
   keyboard:
   - boot

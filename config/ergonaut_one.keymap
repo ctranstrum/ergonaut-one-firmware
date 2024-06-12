@@ -263,11 +263,11 @@
 //                       ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
             bindings = <
 // ┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓            ┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
-// ┃  TAB  ┃       ┃       ┃       ┃       ┃       ┃            ┃   /   ┃   7   ┃   8   ┃   9   ┃   -   ┃ BKSPC ┃
-    &kp TAB   ___     ___     ___     ___     ___               &kp SLASH &kp N7 &kp N8 &kp N9 &kp MINUS &kp BSPC
+// ┃  TAB  ┃       ┃       ┃numlock┃       ┃       ┃            ┃   /   ┃   7   ┃   8   ┃   9   ┃   -   ┃ BKSPC ┃
+    &kp TAB   ___     ___ &tog LTOGN  ___     ___               &kp SLASH &kp N7 &kp N8 &kp N9 &kp MINUS &kp BSPC
 // ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
-// ┃numlock┃ cmd a ┃  ctrl ┃  opt  ┃  cmd  ┃  alt  ┃            ┃   *   ┃   4   ┃   5   ┃   6   ┃   +   ┃ ENTER ┃
-&tog LTOGN CMD(A) &kp LCTRL &kp LALT &kp LCMD &kp RALT          &kp STAR  &kp N4 &kp N5 &kp N6 &kp PLUS &kp ENTER
+// ┃ globe ┃ cmd a ┃  ctrl ┃  opt  ┃  cmd  ┃  alt  ┃            ┃   *   ┃   4   ┃   5   ┃   6   ┃   +   ┃ ENTER ┃
+&kp GLOBE CMD(A) &kp LCTRL &kp LALT &kp LCMD &kp RALT           &kp STAR  &kp N4 &kp N5 &kp N6 &kp PLUS &kp ENTER
 // ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
 // ┃  ctrl ┃ cmd z ┃ cmd x ┃ cmd c ┃ cmd d ┃ cmd v ┃            ┃   :   ┃   1   ┃   2   ┃   3   ┃   =   ┃  TAB  ┃
    &kp LCTRL CMD(Z)  CMD(X)  CMD(C)  CMD(D)  CMD(V)             &kp COLON &kp N1 &kp N2 &kp N3  &kp EQUAL &kp TAB
@@ -289,7 +289,7 @@
       ___     ___     ___     ___     ___     ___               &kp PG_UP  ___     ___     ___     ___   &kp DEL
 // ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
 // ┃       ┃ shift ┃  ctrl ┃  opt  ┃  cmd  ┃  alt  ┃            ┃       ┃   ←   ┃   ↑   ┃   →   ┃       ┃ ENTER ┃
-   ___ &kp LSHFT &kp LCTRL &kp LALT &kp LCMD &kp RALT              ___  &kp LEFT  &kp UP &kp RIGHT ___  &kp ENTER
+&kp GLOBE &kp LSHFT &kp LCTRL &kp LALT &kp LCMD &kp RALT           ___  &kp LEFT  &kp UP &kp RIGHT ___  &kp ENTER
 // ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
 // ┃  ctrl ┃ cmd z ┃ cmd x ┃ cmd c ┃ cmd d ┃ cmd v ┃            ┃ Pg Dn ┃       ┃   ↓   ┃       ┃       ┃ shift ┃
    &kp LCTRL CMD(Z)  CMD(X)  CMD(C)  CMD(D)  CMD(V)             &kp PG_DN  ___   &kp DOWN  ___     ___  &kp LSHFT
@@ -310,8 +310,8 @@
 // ┃       ┃       ┃       ┃       ┃       ┃       ┃            ┃       ┃  F7   ┃  F8   ┃  F9   ┃  F12  ┃       ┃
       ___     ___     ___     ___     ___     ___                  ___   &kp F7  &kp F8  &kp F9  &kp F12   ___
 // ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
-// ┃       ┃ shift ┃  ctrl ┃  opt  ┃  cmd  ┃  alt  ┃            ┃       ┃  F4   ┃  F5   ┃  F6   ┃  F11  ┃       ┃
-   ___ &kp LSHFT &kp LCTRL &kp LALT &kp LCMD &kp RALT              ___   &kp F4  &kp F5  &kp F6  &kp F11   ___
+// ┃ globe ┃ shift ┃  ctrl ┃  opt  ┃  cmd  ┃  alt  ┃            ┃       ┃  F4   ┃  F5   ┃  F6   ┃  F11  ┃       ┃
+&kp GLOBE &kp LSHFT &kp LCTRL &kp LALT &kp LCMD &kp RALT           ___   &kp F4  &kp F5  &kp F6  &kp F11   ___
 // ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
 // ┃  ctrl ┃       ┃       ┃       ┃       ┃       ┃            ┃       ┃  F1   ┃  F2   ┃  F3   ┃  F10  ┃ shift ┃
    &kp LCTRL  ___     ___     ___     ___     ___                  ___   &kp F1  &kp F2  &kp F3  &kp F10 &kp LSHFT
@@ -338,8 +338,8 @@
 // ┃ ~ ctrl┃   <   ┃   >   ┃   +   ┃   _   ┃   ?   ┃            ┃       ┃       ┃       ┃       ┃       ┃       ┃
 &mt LCTRL TILDE &kp LT &kp GT &kp PLUS &kp UNDER &kp QMARK         ___     ___     ___     ___     ___     ___
 // ┗━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━┓    ┏━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
-//                             ┃  =>   ┃   |   ┃   &   ┃    ┃  ###  ┃       ┃  alt  ┃
-                              &arrow_fn &kp PIPE &kp AMPS     I___I    ___   &kp RALT
+//                             ┃  =>   ┃   |   ┃   &   ┃    ┃  ###  ┃  cmd  ┃  alt  ┃
+                              &arrow_fn &kp PIPE &kp AMPS     I___I &kp LCMD &kp RALT
 //                             ┗━━━━━━━┻━━━━━━━┫       ┃    ┃       ┣━━━━━━━┻━━━━━━━┛
 //                                             ┗━━━━━━━┛    ┗━━━━━━━┛
             >;
