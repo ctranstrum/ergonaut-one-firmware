@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: ergonaut_one}
 layers:
   Qwerty:
-  - {t: ▽, type: trans}
+  - ⇥
   - Q
   - W
   - E
@@ -12,8 +12,8 @@ layers:
   - I
   - O
   - P
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ⌫
+  - {t: esc, h: vim & tmux}
   - A
   - S
   - D
@@ -24,58 +24,15 @@ layers:
   - K
   - L
   - ''''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - N
-  - M
-  - {t: ',', s: ;}
-  - {t: ., s: ':'}
-  - {t: /, s: \}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Colemak:
-  - ⇥
-  - Q
-  - W
-  - F
-  - P
-  - B
-  - J
-  - L
-  - U
-  - Y
-  - ''''
-  - ⌫
-  - {t: esc, h: vim & tmux}
-  - A
-  - R
-  - S
-  - T
-  - G
-  - M
-  - N
-  - E
-  - I
-  - O
   - {t: ⏎, h: keyboard}
   - {t: '[', h: ctrl}
   - Z
   - X
   - C
-  - D
   - V
-  - K
-  - H
+  - B
+  - N
+  - M
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - {t: /, s: \}
@@ -86,6 +43,49 @@ layers:
   - {t: ␣, h: symbols}
   - {t: ), h: ⌘}
   - {t: '}', h: alt}
+  Colemak:
+  - {t: ▽, type: trans}
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ''''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - A
+  - R
+  - S
+  - T
+  - G
+  - M
+  - N
+  - E
+  - I
+  - O
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - {t: /, s: \}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Dvorak:
   - {t: ▽, type: trans}
   - ''''

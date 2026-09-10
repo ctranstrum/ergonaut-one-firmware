@@ -180,16 +180,16 @@
             bindings = <
 // ┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓            ┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
 // ┃  TAB  ┃   Q   ┃   W   ┃   E   ┃   R   ┃   T   ┃            ┃   Y   ┃   U   ┃   I   ┃   O   ┃   P   ┃ BKSPC ┃
-     I___I   &kp Q   &kp W   &kp E   &kp R   &kp T                &kp Y   &kp U   &kp I   &kp O   &kp P   I___I
+    &kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T                &kp Y   &kp U   &kp I   &kp O   &kp P  &kp BSPC
 // ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
 // ┃ESC vim┃   A   ┃   S   ┃   D   ┃   F   ┃   G   ┃            ┃   H   ┃   J   ┃   K   ┃   L   ┃  ' "  ┃RET kbd┃
-     I___I   &kp A   &kp S   &kp D   &kp F   &kp G                &kp H   &kp J   &kp K   &kp L  &kp SQT  I___I
+ &lt L_VIM ESC &kp A &kp S   &kp D   &kp F   &kp G                &kp H   &kp J &kp K &kp L &kp SQT &lt L_KBD RET
 // ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
 // ┃ [ ctrl┃   Z   ┃   X   ┃   C   ┃   V   ┃   B   ┃            ┃   N   ┃   M   ┃  , ;  ┃  . :  ┃  / \  ┃] shift┃
-     I___I   &kp Z   &kp X   &kp C   &kp V   &kp B                &kp N   &kp M   &comma  &dot    &slash  I___I
+&mt LCTRL LBKT &kp Z &kp X   &kp C   &kp V   &kp B                &kp N   &kp M &comma &dot &slash &mt LSHFT RBKT
 // ┗━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━┓    ┏━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
 //                             ┃ { opt ┃ ( num ┃ SHIFT ┃    ┃ SPACE ┃ ) cmd ┃ } alt ┃
-                                 I___I   I___I   I___I        I___I   I___I   I___I
+                &mt LALT LBRC &lt LMO_N LPAR &lsscw L_NAV 0 &lt L_SYM SPC &mt LCMD RPAR &mt RALT RBRC
 //                             ┗━━━━━━━┻━━━━━━━┫  nav  ┃    ┃  sym  ┣━━━━━━━┻━━━━━━━┛
 //                                             ┗━━━━━━━┛    ┗━━━━━━━┛
             >;
@@ -202,16 +202,16 @@
             bindings = <
 // ┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓            ┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
 // ┃  TAB  ┃   Q   ┃   W   ┃   F   ┃   P   ┃   B   ┃            ┃   J   ┃   L   ┃   U   ┃   Y   ┃  ' "  ┃ BKSPC ┃
-    &kp TAB  &kp Q   &kp W   &kp F   &kp P   &kp B                &kp J   &kp L   &kp U   &kp Y  &kp SQT &kp BSPC
+     I___I   &kp Q   &kp W   &kp F   &kp P   &kp B                &kp J   &kp L   &kp U   &kp Y  &kp SQT  I___I
 // ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
 // ┃ESC vim┃   A   ┃   R   ┃   S   ┃   T   ┃   G   ┃            ┃   M   ┃   N   ┃   E   ┃   I   ┃   O   ┃RET kbd┃
- &lt L_VIM ESC &kp A &kp R   &kp S   &kp T   &kp G                &kp M   &kp N   &kp E &kp I &kp O &lt L_KBD RET
+     I___I   &kp A   &kp R   &kp S   &kp T   &kp G                &kp M   &kp N   &kp E   &kp I   &kp O   I___I
 // ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
 // ┃ [ ctrl┃   Z   ┃   X   ┃   C   ┃   D   ┃   V   ┃            ┃   K   ┃   H   ┃  , ;  ┃  . :  ┃  / \  ┃] shift┃
-&mt LCTRL LBKT &kp Z &kp X   &kp C   &kp D   &kp V                &kp K   &kp H   &comma  &dot &slash &mt LSHFT RBKT
+     I___I   &kp Z   &kp X   &kp C   &kp D   &kp V                &kp K   &kp H   &comma  &dot    &slash  I___I
 // ┗━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━┓    ┏━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
 //                             ┃ { opt ┃ ( num ┃ SHIFT ┃    ┃ SPACE ┃ ) cmd ┃ } alt ┃
-                &mt LALT LBRC &lt LMO_N LPAR &lsscw L_NAV 0 &lt L_SYM SPC &mt LCMD RPAR &mt RALT RBRC
+                                 I___I   I___I   I___I        I___I   I___I   I___I
 //                             ┗━━━━━━━┻━━━━━━━┫  nav  ┃    ┃  sym  ┣━━━━━━━┻━━━━━━━┛
 //                                             ┗━━━━━━━┛    ┗━━━━━━━┛
             >;
