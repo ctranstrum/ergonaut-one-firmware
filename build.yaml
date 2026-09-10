@@ -4,6 +4,9 @@ include:
     shield: ergonaut_one_dongle dongle_oled
     artifact-name: ergonaut_dongle
   - board: seeeduino_xiao_ble
+    shield: ergonaut_one_left_central
+    artifact-name: ergonaut_left_central
+  - board: seeeduino_xiao_ble
     shield: ergonaut_one_left
     artifact-name: ergonaut_left
   - board: seeeduino_xiao_ble

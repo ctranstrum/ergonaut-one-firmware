@@ -4,6 +4,9 @@
 config SHIELD_ERGONAUT_ONE_DONGLE
     def_bool $(shields_list_contains,ergonaut_one_dongle)
 
+config SHIELD_ERGONAUT_ONE_LEFT_CENTRAL
+    def_bool $(shields_list_contains,ergonaut_one_left_central)
+
 config SHIELD_ERGONAUT_ONE_LEFT
     def_bool $(shields_list_contains,ergonaut_one_left)
 
