@@ -1,4 +1,4 @@
-file_format: '1'
+file_format: "1"
 id: ergonaut_one
 name: Ergonaut One
 type: shield
@@ -8,5 +8,6 @@ features:
   - keys
 siblings:
   - ergonaut_one_dongle
+  - ergonaut_one_left_central
   - ergonaut_one_left
   - ergonaut_one_right
