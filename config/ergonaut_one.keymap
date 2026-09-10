@@ -3,8 +3,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define L_CLMK 0
-#define L_QRTY 1
+#define L_QRTY 0
+#define L_CLMK 1
 #define L_DVRK 2
 #define LMO_N  3
 #define LTOGN  4
@@ -173,28 +173,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Colemak {
-//                       ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
-            display-name = "Colemak"               ;
-//                       ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            bindings = <
-// ┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓            ┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
-// ┃  TAB  ┃   Q   ┃   W   ┃   F   ┃   P   ┃   B   ┃            ┃   J   ┃   L   ┃   U   ┃   Y   ┃  ' "  ┃ BKSPC ┃
-    &kp TAB  &kp Q   &kp W   &kp F   &kp P   &kp B                &kp J   &kp L   &kp U   &kp Y  &kp SQT &kp BSPC
-// ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
-// ┃ESC vim┃   A   ┃   R   ┃   S   ┃   T   ┃   G   ┃            ┃   M   ┃   N   ┃   E   ┃   I   ┃   O   ┃RET kbd┃
- &lt L_VIM ESC &kp A &kp R   &kp S   &kp T   &kp G                &kp M   &kp N   &kp E &kp I &kp O &lt L_KBD RET
-// ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
-// ┃ [ ctrl┃   Z   ┃   X   ┃   C   ┃   D   ┃   V   ┃            ┃   K   ┃   H   ┃  , ;  ┃  . :  ┃  / \  ┃] shift┃
-&mt LCTRL LBKT &kp Z &kp X   &kp C   &kp D   &kp V                &kp K   &kp H   &comma  &dot &slash &mt LSHFT RBKT
-// ┗━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━┓    ┏━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
-//                             ┃ { opt ┃ ( num ┃ SHIFT ┃    ┃ SPACE ┃ ) cmd ┃ } alt ┃
-                &mt LALT LBRC &lt LMO_N LPAR &lsscw L_NAV 0 &lt L_SYM SPC &mt LCMD RPAR &mt RALT RBRC
-//                             ┗━━━━━━━┻━━━━━━━┫  nav  ┃    ┃  sym  ┣━━━━━━━┻━━━━━━━┛
-//                                             ┗━━━━━━━┛    ┗━━━━━━━┛
-            >;
-        };
-
         Qwerty {
 //                       ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
             display-name = "Qwerty"                ;
@@ -212,6 +190,28 @@
 // ┗━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━┓    ┏━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
 //                             ┃ { opt ┃ ( num ┃ SHIFT ┃    ┃ SPACE ┃ ) cmd ┃ } alt ┃
                                  I___I   I___I   I___I        I___I   I___I   I___I
+//                             ┗━━━━━━━┻━━━━━━━┫  nav  ┃    ┃  sym  ┣━━━━━━━┻━━━━━━━┛
+//                                             ┗━━━━━━━┛    ┗━━━━━━━┛
+            >;
+        };
+
+        Colemak {
+//                       ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            display-name = "Colemak"               ;
+//                       ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
+            bindings = <
+// ┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓            ┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+// ┃  TAB  ┃   Q   ┃   W   ┃   F   ┃   P   ┃   B   ┃            ┃   J   ┃   L   ┃   U   ┃   Y   ┃  ' "  ┃ BKSPC ┃
+    &kp TAB  &kp Q   &kp W   &kp F   &kp P   &kp B                &kp J   &kp L   &kp U   &kp Y  &kp SQT &kp BSPC
+// ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
+// ┃ESC vim┃   A   ┃   R   ┃   S   ┃   T   ┃   G   ┃            ┃   M   ┃   N   ┃   E   ┃   I   ┃   O   ┃RET kbd┃
+ &lt L_VIM ESC &kp A &kp R   &kp S   &kp T   &kp G                &kp M   &kp N   &kp E &kp I &kp O &lt L_KBD RET
+// ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫            ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
+// ┃ [ ctrl┃   Z   ┃   X   ┃   C   ┃   D   ┃   V   ┃            ┃   K   ┃   H   ┃  , ;  ┃  . :  ┃  / \  ┃] shift┃
+&mt LCTRL LBKT &kp Z &kp X   &kp C   &kp D   &kp V                &kp K   &kp H   &comma  &dot &slash &mt LSHFT RBKT
+// ┗━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━┓    ┏━━━┻━━━┳━━━┻━━━┳━━━┻━━━┳━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
+//                             ┃ { opt ┃ ( num ┃ SHIFT ┃    ┃ SPACE ┃ ) cmd ┃ } alt ┃
+                &mt LALT LBRC &lt LMO_N LPAR &lsscw L_NAV 0 &lt L_SYM SPC &mt LCMD RPAR &mt RALT RBRC
 //                             ┗━━━━━━━┻━━━━━━━┫  nav  ┃    ┃  sym  ┣━━━━━━━┻━━━━━━━┛
 //                                             ┗━━━━━━━┛    ┗━━━━━━━┛
             >;
